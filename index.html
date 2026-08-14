@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Julia & Brenda | Nosso Casamento</title>
+
+  <meta
+    name="description"
+    content="Convite de casamento de Julia e Brenda — 14 de novembro de 2026."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --teal: #176f72;
+      --teal-dark: #0d494b;
+      --gold: #b58a43;
+      --blush: #f5e8e5;
+      --cream: #fffaf2;
+      --white: #ffffff;
+      --text: #3f4545;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.7;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+    }
+
+    section {
+      padding: 85px 20px;
+    }
+
+    .container {
+      width: min(100%, 1050px);
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      color: var(--teal-dark);
+      font-size: clamp(2.6rem, 7vw, 4.5rem);
+      line-height: 1;
+      margin: 12px 0 25px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 28px;
+      border: 1px solid var(--gold);
+      border-radius: 50px;
+      background: var(--teal);
+      color: white;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    /* Abertura */
+
+    .opening {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, #f5deda 0, transparent 35%),
+        radial-gradient(circle at bottom right, #b8dddd 0, transparent 35%),
+        var(--cream);
+      text-align: center;
+    }
+
+    .opening::before,
+    .opening::after {
+      content: "❀";
+      position: absolute;
+      color: rgba(23, 111, 114, 0.16);
+      font-size: 13rem;
+    }
+
+    .opening::before {
+      top: -45px;
+      left: -30px;
+      transform: rotate(-20deg);
+    }
+
+    .opening::after {
+      right: -30px;
+      bottom: -45px;
+      transform: rotate(20deg);
+    }
+
+    .opening-content {
+      max-width: 760px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .monogram {
+      width: 105px;
+      height: 105px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 28px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      color: var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+    }
+
+    .opening h1 {
+      color: var(--teal-dark);
+      font-size: clamp(4rem, 13vw, 7.5rem);
+      font-style: italic;
+      line-height: 0.9;
+    }
+
+    .opening h2 {
+      margin: 30px 0 8px;
+      color: var(--gold);
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .opening-date {
+      margin-bottom: 35px;
+      font-size: 1rem;
+      letter-spacing: 3px;
+    }
+
+    /* Navegação */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 15px 20px;
+      background: rgba(255, 250, 242, 0.95);
+      border-bottom: 1px solid rgba(181, 138, 67, 0.25);
+      backdrop-filter: blur(10px);
+    }
+
+    nav div {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      overflow-x: auto;
+    }
+
+    nav a {
+      color: var(--teal-dark);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* História */
+
+    .story {
+      text-align: center;
+    }
+
+    .story-text {
+      max-width: 720px;
+      margin: auto;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.45rem;
+    }
+
+    .quote {
+      margin-top: 35px;
+      color: var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.7rem;
+      font-style: italic;
+    }
+
+    /* Contagem */
+
+    .countdown-section {
+      background: var(--teal-dark);
+      color: white;
+      text-align: center;
+    }
+
+    .countdown-section .section-title {
+      color: white;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      max-width: 700px;
+      margin: 40px auto 0;
+    }
+
+    .countdown div {
+      padding: 22px 8px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .countdown strong {
+      display: block;
+      color: #f4d596;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      line-height: 1;
+    }
+
+    .countdown span {
+      font-size: 0.64rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* Informações */
+
+    .details {
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    .card {
+      padding: 38px 25px;
+      border: 1px solid rgba(181, 138, 67, 0.35);
+      border-radius: 25px;
+      background: white;
+      box-shadow: 0 15px 45px rgba(13, 73, 75, 0.08);
+    }
+
+    .card-icon {
+      display: block;
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+
+    .card h3 {
+      color: var(--teal-dark);
+      font-size: 2rem;
+    }
+
+    /* Galeria */
+
+    .gallery-section {
+      background: var(--blush);
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    .photo {
+      min-height: 340px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border: 8px solid white;
+      border-radius: 8px;
+      background:
+        linear-gradient(rgba(13, 73, 75, 0.15), rgba(13, 73, 75, 0.15)),
+        linear-gradient(145deg, #b9d9d8, #f8e3df);
+      box-shadow: 0 15px 35px rgba(20, 60, 60, 0.12);
+      color: white;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.5rem;
+      font-style: italic;
+    }
+
+    /* Dress code */
+
+    .dresscode {
+      text-align: center;
+    }
+
+    .dress-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .dress-card {
+      padding: 35px;
+      border-radius: 25px;
+      background: white;
+      box-shadow: 0 15px 45px rgba(13, 73, 75, 0.08);
+      text-align: left;
+    }
+
+    .dress-card h3 {
+      margin-bottom: 18px;
+      color: var(--teal-dark);
+      font-size: 2.2rem;
+    }
+
+    .allowed {
+      color: #52785d;
+    }
+
+    .avoid {
+      color: #a15353;
+    }
+
+    .palette {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .color {
+      width: 42px;
+      height: 42px;
+      border: 3px solid white;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px #bbb;
+    }
+
+    /* Ações */
+
+    .actions {
+      background: white;
+      text-align: center;
+    }
+
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    .action-card {
+      padding: 50px 25px;
+      border-radius: 25px;
+      background: var(--cream);
+      border: 1px solid rgba(181, 138, 67, 0.3);
+    }
+
+    .action-card h3 {
+      color: var(--teal-dark);
+      font-size: 2.4rem;
+    }
+
+    .action-card p {
+      margin: 10px 0 25px;
+    }
+
+    /* Encerramento */
+
+    .final-message {
+      padding: 110px 20px;
+      background:
+        linear-gradient(rgba(13, 73, 75, 0.91), rgba(13, 73, 75, 0.91)),
+        var(--teal-dark);
+      color: white;
+      text-align: center;
+    }
+
+    .final-message h2 {
+      color: #f4d596;
+      font-size: clamp(3rem, 9vw, 5.5rem);
+      line-height: 1;
+    }
+
+    .final-message p {
+      max-width: 720px;
+      margin: 28px auto;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.5rem;
+    }
+
+    .signature {
+      color: #f4d596;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.4rem;
+      font-style: italic;
+    }
+
+    footer {
+      padding: 35px 20px;
+      background: #082f30;
+      color: white;
+      text-align: center;
+    }
+
+    footer strong {
+      color: #f4d596;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.8rem;
+    }
+
+    @media (max-width: 760px) {
+      section {
+        padding: 70px 18px;
+      }
+
+      .cards,
+      .gallery,
+      .dress-grid,
+      .action-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .countdown {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery .photo {
+        min-height: 390px;
+      }
+
+      nav div {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="opening" id="inicio">
+    <div class="opening-content">
+      <div class="monogram">J & B</div>
+
+      <p class="eyebrow">Você está convidado para celebrar</p>
+
+      <h1>Julia & Brenda</h1>
+
+      <h2>Nosso casamento</h2>
+
+      <p class="opening-date">14 • 11 • 2026 — 15h</p>
+
+      <a class="button" href="#historia">Abrir convite</a>
+    </div>
+  </section>
+
+  <nav>
+    <div>
+      <a href="#historia">História</a>
+      <a href="#contagem">Contagem</a>
+      <a href="#detalhes">Detalhes</a>
+      <a href="#galeria">Fotos</a>
+      <a href="#dresscode">Traje</a>
+      <a href="#confirmacao">Confirmar</a>
+    </div>
+  </nav>
+
+  <section class="story" id="historia">
+    <div class="container">
+      <p class="eyebrow">Capítulo um</p>
+      <h2 class="section-title">Nossa história</h2>
+
+      <div class="story-text">
+        <p>
+          Antes de existir um “nós”, existiu uma amizade especial.
+          Foram dois anos compartilhando momentos, risadas e cumplicidade,
+          até percebermos que o nosso encontro guardava algo ainda maior.
+        </p>
+
+        <p style="margin-top: 22px;">
+          Hoje celebramos um amor construído com amizade, respeito,
+          carinho e a certeza de que queremos caminhar juntas por toda a vida.
+        </p>
+      </div>
+
+      <p class="quote">
+        “Toda história de amor merece ser celebrada.”
+      </p>
+    </div>
+  </section>
+
+  <section class="countdown-section" id="contagem">
+    <div class="container">
+      <p class="eyebrow">Está chegando</p>
+      <h2 class="section-title">Contagem regressiva</h2>
+
+      <div class="countdown">
+        <div>
+          <strong id="days">00</strong>
+          <span>Dias</span>
+        </div>
+
+        <div>
+          <strong id="hours">00</strong>
+          <span>Horas</span>
+        </div>
+
+        <div>
+          <strong id="minutes">00</strong>
+          <span>Minutos</span>
+        </div>
+
+        <div>
+          <strong id="seconds">00</strong>
+          <span>Segundos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="details" id="detalhes">
+    <div class="container">
+      <p class="eyebrow">Guarde esta data</p>
+      <h2 class="section-title">O grande dia</h2>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card-icon">📅</span>
+          <h3>Data</h3>
+          <p>14 de novembro de 2026</p>
+        </article>
+
+        <article class="card">
+          <span class="card-icon">🕒</span>
+          <h3>Horário</h3>
+          <p>Às 15 horas</p>
+        </article>
+
+        <article class="card">
+          <span class="card-icon">📍</span>
+          <h3>Local</h3>
+          <p>Clube Zezinho Bahia</p>
+
+          <a
+            class="button"
+            href="https://www.google.com/maps/search/?api=1&query=Clube+Zezinho+Bahia"
+            target="_blank"
+            rel="noopener"
+          >
+            Como chegar
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section" id="galeria">
+    <div class="container">
+      <p class="eyebrow">Nossos momentos</p>
+      <h2 class="section-title">Um pouco de nós</h2>
+
+      <div class="gallery">
+        <div class="photo">Em breve, nossa foto</div>
+        <div class="photo">Amor e cumplicidade</div>
+        <div class="photo">Julia & Brenda</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dresscode" id="dresscode">
+    <div class="container">
+      <p class="eyebrow">Dress code</p>
+      <h2 class="section-title">Traje fino</h2>
+
+      <p>
+        Escolha um visual elegante e confortável para celebrar conosco.
+      </p>
+
+      <div class="dress-grid">
+        <article class="dress-card">
+          <h3>Para eles</h3>
+
+          <p class="allowed">✓ Terno azul-marinho</p>
+          <p class="allowed">✓ Terno preto</p>
+          <p class="allowed">✓ Terno bege</p>
+          <p class="avoid">✕ Evitar terno cinza-claro</p>
+
+          <div class="palette">
+            <span class="color" style="background:#172d50;"></span>
+            <span class="color" style="background:#171717;"></span>
+            <span class="color" style="background:#c9ad84;"></span>
+          </div>
+        </article>
+
+        <article class="dress-card">
+          <h3>Para elas</h3>
+
+          <p class="allowed">✓ Verde-oliva</p>
+          <p class="allowed">✓ Nude ou rosé</p>
+          <p class="allowed">✓ Marsala</p>
+          <p class="avoid">✕ Evitar azul-escuro e verde-escuro</p>
+
+          <div class="palette">
+            <span class="color" style="background:#778453;"></span>
+            <span class="color" style="background:#d7b39c;"></span>
+            <span class="color" style="background:#c9828c;"></span>
+            <span class="color" style="background:#803d47;"></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="actions" id="confirmacao">
+    <div class="container">
+      <p class="eyebrow">Celebre conosco</p>
+      <h2 class="section-title">Esperamos você</h2>
+
+      <div class="action-grid">
+        <article class="action-card">
+          <span class="card-icon">💌</span>
+          <h3>Confirme sua presença</h3>
+          <p>
+            Sua confirmação é muito importante para organizarmos tudo
+            com carinho.
+          </p>
+
+          <a
+            class="button"
+            href="https://noivos.casar.com/juliaebrenda"
+            target="_blank"
+            rel="noopener"
+          >
+            Confirmar presença
+          </a>
+        </article>
+
+        <article class="action-card">
+          <span class="card-icon">🎁</span>
+          <h3>Lista de presentes</h3>
+          <p>
+            Sua presença é o nosso maior presente, mas preparamos uma
+            lista para quem desejar nos presentear.
+          </p>
+
+          <a
+            class="button"
+            href="https://noivos.casar.com/julia-e-brenda-lista-presentes"
+            target="_blank"
+            rel="noopener"
+          >
+            Ver lista
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-message">
+    <div class="container">
+      <p class="eyebrow">Você faz parte da nossa história</p>
+
+      <h2>Escolhido(a) a dedo.</h2>
+
+      <p>
+        Se este convite chegou até você, saiba que não foi por acaso.
+        Você foi escolhido(a) com carinho para celebrar um dos dias mais
+        importantes de nossas vidas. Sua presença tornará esse momento
+        ainda mais especial.
+      </p>
+
+      <p>Esperamos você.</p>
+
+      <div class="signature">Com amor, Julia & Brenda</div>
+    </div>
+  </section>
+
+  <footer>
+    <strong>J & B</strong>
+    <p>14 • 11 • 2026</p>
+    <small>Feito com amor.</small>
+  </footer>
+
+  <script>
+    const weddingDate = new Date("2026-11-14T15:00:00-03:00");
+
+    function updateCountdown() {
+      const now = new Date();
+      const difference = weddingDate - now;
+
+      if (difference <= 0) {
+        document.querySelector(".countdown").innerHTML =
+          "<h3 style='grid-column:1/-1;font-size:2.5rem'>O nosso grande dia chegou!</h3>";
+        return;
+      }
+
+      const days = Math.floor(difference / 86400000);
+      const hours = Math.floor((difference / 3600000) % 24);
+      const minutes = Math.floor((difference / 60000) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent =
+        String(hours).padStart(2, "0");
+      document.getElementById("minutes").textContent =
+        String(minutes).padStart(2, "0");
+      document.getElementById("seconds").textContent =
+        String(seconds).padStart(2, "0");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+
+</body>
+</html>
