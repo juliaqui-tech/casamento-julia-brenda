@@ -1,0 +1,25 @@
+CONVITE DE CASAMENTO — JULIA & BRENDA
+
+VERSÃO 2 — ELEGANTE E RÚSTICA
+- Envelope teal em tela inteira, com textura de papel e ramos em relevo.
+- Selo dourado J&B e movimento de abertura.
+- Música com entrada suave após o toque no selo.
+- Imagens em aquarela e acabamento artesanal.
+
+Data: 14/11/2026, às 15h20
+Local: Clube Zezinho Bahia
+
+ARQUIVOS
+- index.html: site completo com estilos, animações e funcionalidades.
+- assets/: imagens e música usadas pelo convite.
+
+PARA PUBLICAR NO GITHUB
+1. Envie o index.html para a raiz do repositório.
+2. Crie a pasta assets e envie todos os arquivos dela sem alterar os nomes.
+3. Mantenha o GitHub Pages configurado para a branch main e pasta /(root).
+4. Aguarde alguns minutos e atualize o link publicado.
+
+IMPORTANTE
+- Não renomeie os arquivos da pasta assets.
+- A música começa após o convidado tocar no selo do envelope.
+- O botão redondo no canto inferior direito pausa ou retoma a música.
