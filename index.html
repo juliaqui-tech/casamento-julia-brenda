@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#075f61">
   <meta name="description" content="Convite de casamento de Julia e Brenda — 14 de novembro de 2026, às 15h20.">
+  <link rel="canonical" href="https://juliaqui-tech.github.io/casamento-julia-brenda/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Casamento Julia & Brenda">
+  <meta property="og:title" content="Convite de casamento — Julia & Brenda">
+  <meta property="og:description" content="Você é nosso convidado especial. Toque para abrir o convite oficial.">
+  <meta property="og:url" content="https://juliaqui-tech.github.io/casamento-julia-brenda/">
+  <meta property="og:image" content="https://juliaqui-tech.github.io/casamento-julia-brenda/assets/preview-whatsapp.jpg">
+  <meta property="og:image:secure_url" content="https://juliaqui-tech.github.io/casamento-julia-brenda/assets/preview-whatsapp.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Envelope teal com selo dourado J&B">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Convite de casamento — Julia & Brenda">
+  <meta name="twitter:description" content="Você é nosso convidado especial. Toque para abrir o convite oficial.">
+  <meta name="twitter:image" content="https://juliaqui-tech.github.io/casamento-julia-brenda/assets/preview-whatsapp.jpg">
   <title>Julia & Brenda | 14.11.2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,6 +120,26 @@
     .dress-alert { max-width: 790px; margin: 28px auto 0; padding: 23px; border-inline: 1px solid var(--gold); background: #f8f2e9; color: #724747; }
     .dress-alert strong { color: var(--teal-dark); }
 
+    /* MANUAL DO CONVIDADO */
+    .guest-manual { padding: 0 18px 92px; overflow: hidden; background: #eee3d1; text-align: center; }
+    .guest-manual::before { display: none; }
+    .manual-visual { width: min(100%, 1120px); height: clamp(430px, 68vw, 700px); margin: 0 auto; background: url("assets/local-cerimonia-aquarela.png") center 12% / cover no-repeat; }
+    .manual-paper { position: relative; z-index: 2; width: min(100%, 960px); margin: clamp(-170px, -16vw, -115px) auto 0; padding: clamp(42px, 7vw, 78px) clamp(18px, 5vw, 58px) 60px; border: 1px solid #bea16c; background-color: rgba(255,250,240,.97); background-image: repeating-linear-gradient(91deg, rgba(90,59,26,.022) 0 1px, transparent 1px 6px); box-shadow: 0 23px 65px rgba(63,45,28,.18); }
+    .manual-paper::before, .manual-paper::after { content: "❦"; position: absolute; color: #aa7b37; font-size: 2rem; opacity: .8; }
+    .manual-paper::before { top: 16px; left: 22px; }
+    .manual-paper::after { right: 22px; bottom: 14px; transform: rotate(180deg); }
+    .manual-title { margin: 4px 0 12px; color: var(--teal-dark); font-size: clamp(3.1rem, 9vw, 6rem); font-weight: 500; line-height: .84; }
+    .manual-title span { display: block; color: #9d7134; font-size: .65em; font-style: italic; font-weight: 400; }
+    .manual-intro { max-width: 680px; margin: 25px auto 38px; color: #51473c; font-size: clamp(1.2rem, 3vw, 1.45rem); line-height: 1.45; }
+    .manual-intro strong { color: var(--teal-dark); }
+    .manual-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; text-align: left; }
+    .manual-item { display: grid; grid-template-columns: 52px 1fr; gap: 14px; align-items: center; min-height: 92px; padding: 15px 17px; border: 1px solid rgba(180,135,62,.38); background: rgba(255,255,255,.62); }
+    .manual-item.wide { grid-column: 1 / -1; }
+    .manual-icon { display: grid; width: 48px; height: 48px; place-items: center; border: 1px solid #b4873e; border-radius: 50%; background: #0b6666; color: #f5dfab; font-size: 1.35rem; line-height: 1; box-shadow: 0 5px 13px rgba(11,102,102,.15); }
+    .manual-item p { margin: 0; color: #4d453b; font-size: 1.02rem; line-height: 1.38; }
+    .manual-item strong { color: var(--teal-dark); }
+    .manual-closing { margin-top: 34px; color: var(--teal); font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2rem, 6vw, 3.2rem); font-style: italic; }
+
     .actions { background: #f0e9df; }
     .action-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; }
     .action-card { padding: 45px 25px; border: 1px solid rgba(189,148,80,.35); background: var(--paper); box-shadow: var(--shadow); }
@@ -122,11 +159,15 @@
     @media (max-width: 760px) {
       section { padding: 70px 18px; }
       nav div { justify-content: flex-start; }
-      .cards, .gallery, .action-grid { grid-template-columns: 1fr; }
+      .cards, .gallery, .action-grid, .manual-grid { grid-template-columns: 1fr; }
       .cards, .gallery { max-width: 470px; margin-inline: auto; }
       .gallery figure, .gallery figure:nth-child(1), .gallery figure:nth-child(2), .gallery figure:nth-child(3) { transform: none; }
       .countdown { grid-template-columns: repeat(2, 1fr); }
       .seal { width: 80px; }
+      .guest-manual { padding-inline: 0; }
+      .manual-visual { height: 470px; }
+      .manual-paper { width: calc(100% - 28px); margin-top: -125px; padding-inline: 17px; }
+      .manual-item, .manual-item.wide { grid-column: auto; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -224,7 +265,7 @@
     </section>
 
     <nav aria-label="Navegação principal"><div>
-      <a href="#convite">Convite</a><a href="#historia">História</a><a href="#fotos">Fotos</a><a href="#local">Local</a><a href="#traje">Traje</a><a href="#confirmacao">Confirmar</a>
+      <a href="#convite">Convite</a><a href="#historia">História</a><a href="#fotos">Fotos</a><a href="#local">Local</a><a href="#traje">Traje</a><a href="#manual">Manual</a><a href="#confirmacao">Confirmar</a>
     </div></nav>
 
     <section class="invitation-message reveal" id="convite"><div class="container">
@@ -278,6 +319,28 @@
       <img class="dress-illustration" src="assets/dress-code-aquarela.jpeg" alt="Referências de traje fino em aquarela" loading="lazy">
       <div class="dress-alert"><strong>Pedimos que evitem:</strong> ternos azul-marinho e cinza-claro, além de vestidos azul-escuro e verde-petróleo/escuro.</div>
     </div></section>
+
+    <section class="guest-manual reveal" id="manual" aria-labelledby="manual-title">
+      <div class="manual-visual" role="img" aria-label="Local da cerimônia pintado em aquarela"></div>
+      <div class="manual-paper">
+        <p class="eyebrow">Com carinho</p>
+        <h2 class="manual-title" id="manual-title">Manual do <span>convidado</span></h2>
+        <p class="manual-intro"><strong>Querido convidado,</strong> nos ajude a deixar esse dia ainda mais especial!<br>Por gentileza:</p>
+        <div class="manual-grid">
+          <article class="manual-item"><span class="manual-icon" aria-hidden="true">◷</span><p><strong>Seja pontual:</strong> não se atrase.</p></article>
+          <article class="manual-item"><span class="manual-icon" aria-hidden="true">♙</span><p><strong>Participe da cerimônia</strong> e evite o celular. Vamos registrar todos os momentos.</p></article>
+          <article class="manual-item"><span class="manual-icon" aria-hidden="true">♡</span><p><strong>Não convide outras pessoas.</strong> O convite é pessoal e preparado com carinho.</p></article>
+          <article class="manual-item"><span class="manual-icon" aria-hidden="true">♕</span><p><strong>Não use branco, off-white ou bege.</strong> Essas são as cores das noivas.</p></article>
+          <article class="manual-item"><span class="manual-icon" aria-hidden="true">✦</span><p><strong>Não faça comentários negativos.</strong> Celebre esse momento conosco.</p></article>
+          <article class="manual-item"><span class="manual-icon" aria-hidden="true">❧</span><p><strong>Não saia sem se despedir</strong> das noivas.</p></article>
+          <article class="manual-item wide"><span class="manual-icon" aria-hidden="true">♨</span><p><strong>Bebidas:</strong> nossa celebração contará com uma seleção especial de batidas e caipirinhas, disponíveis nas versões com e sem álcool. Caso prefira outra bebida, fique à vontade para trazê-la e aproveitar a celebração conosco.</p></article>
+          <article class="manual-item"><span class="manual-icon" aria-hidden="true">♢</span><p><strong>Leve um calçado opcional</strong> para o lazer!</p></article>
+          <article class="manual-item"><span class="manual-icon" aria-hidden="true">♧</span><p><strong>Aguarde a liberação</strong> antes de aproveitar a mesa de doces.</p></article>
+          <article class="manual-item wide"><span class="manual-icon" aria-hidden="true">◎</span><p><strong>Não atrapalhe os fotógrafos.</strong> Eles cuidarão de registrar cada detalhe.</p></article>
+        </div>
+        <p class="manual-closing">Aproveite bastante!</p>
+      </div>
+    </section>
 
     <section class="actions reveal" id="confirmacao"><div class="container">
       <p class="eyebrow">Celebre conosco</p><h2 class="section-title">Esperamos você</h2>
